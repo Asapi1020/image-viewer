@@ -1,22 +1,52 @@
 {
-  "name": "img-scrape-electron",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/main.js",
-  "scripts": {
-    "dev": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
-  },
-  "build": {
-    "appId": "img-scrape-electron"
-  },
-  "keywords": [],
-  "author": "Asapi1020",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^31.3.1",
-    "electron-builder": "^24.13.3"
-  }
+	"name": "img-scrape-electron",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/main.js",
+	"scripts": {
+		"prepare": "husky",
+		"format": "prettier --write **/*.{js,jsx,ts,tsx}",
+		"check": "prettier --check **/*.{js,jsx,ts,tsx}",
+		"lint": "next lint",
+		"dev": "electron .",
+		"test": "echo \"Error: no test specified\" && exit 0",
+		"pack": "electron-builder --dir",
+		"dist": "electron-builder"
+	},
+	"build": {
+		"appId": "img-scrape-electron"
+	},
+	"keywords": [],
+	"author": "Asapi1020",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^22.1.0",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@typescript-eslint/eslint-plugin": "^8.0.1",
+		"@typescript-eslint/parser": "^8.0.1",
+		"electron": "^31.3.1",
+		"electron-builder": "^24.13.3",
+		"eslint": "^8.57.0",
+		"eslint-config-next": "^14.2.5",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-jsx-a11y": "^6.9.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react": "^7.35.0",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"husky": "^9.1.4",
+		"lint-staged": "^15.2.8",
+		"prettier": "^3.3.3",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"next": "^14.2.5",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"lint-staged": {
+		"./src/**/*.{js,jsx,ts,tsx}": "pnpm format"
+	}
 }
+
